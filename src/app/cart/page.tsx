@@ -15,7 +15,6 @@ const CartPage = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cart);
   const products = useSelector((state: RootState) => state.data.data);
-  console.log(!cartItems);
 
   const handleRemoveFromCart = (id: number) => {
     dispatch(removeFromCart({ id }));

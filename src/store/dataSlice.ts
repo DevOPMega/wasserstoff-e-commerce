@@ -15,7 +15,6 @@ const initialState: DataState = {
 
 // Thunk to fetch data
 export const fetchData = createAsyncThunk("data/fetchData", async () => {
-    console.log("calling")
     const response = await axios.get(`${process.env.NEXT_PUBLIC_API_PRODUCTS}`);
     return response.data;
 });

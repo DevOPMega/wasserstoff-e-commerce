@@ -45,6 +45,7 @@ const HomePage = () => {
       <div className="px-4 py-2 grid grid-cols-1 justify-items-center gap-4 md:grid-cols-2 lg:grid-cols-4">
         {data.map((product) => (
           <Card 
+            key={product.id}
             product={product}
           />
         ))}

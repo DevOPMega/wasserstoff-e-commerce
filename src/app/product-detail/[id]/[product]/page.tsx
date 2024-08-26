@@ -8,7 +8,7 @@ import Image from "next/image";
 import Stars from "@/components/Star";
 import ReviewLists from "@/components/ReviewLists";
 
-const page = () => {
+const ProductDetailPage = () => {
   const { id } = useParams();
   // const product = useSelector((state: RootState) => state.data.data.find(product => product.id === id))
   const product = useSelector((state: RootState) => state.data.data.find(product => product.id === Number(id)))
@@ -81,4 +81,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ProductDetailPage;
