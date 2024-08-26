@@ -11,7 +11,7 @@ import {
 import { RootState } from "@/store/store";
 import Image from "next/image";
 
-const page = () => {
+const CartPage = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cart);
   const products = useSelector((state: RootState) => state.data.data);
@@ -81,4 +81,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default CartPage;
