@@ -38,23 +38,43 @@ const CartPage = () => {
     );
   }
   return (
-    <div className="my-8 mx-auto w-11/12">
+    <div className="min-h-screen my-8 mx-auto w-11/12">
       <div className="flex flex-col space-y-3">
         {cartItems.map((item, i) => (
-          <div key={i} className="flex flex-col gap-8 px-4 py-4 border rounded-md md:flex-row">
+          <div
+            key={i}
+            className="flex flex-col gap-8 px-4 py-4 border rounded-md md:flex-row"
+          >
             <div className="basis-1/2 flex justify-center items-center">
-            <Image
-              src={`${products[item.id].image}`}
-              width={245}
-              height={245}
-              className="w-[245px] h-[245px]"
-              alt="Image"
-            />
+              <Image
+                src={`${products[item.id].image}`}
+                width={245}
+                height={245}
+                className="w-[245px] h-[245px]"
+                alt="Image"
+              />
             </div>
             <div className="basis-1/2 flex flex-col space-y-2">
               <h2 className="text-xl font-semibold md:text-2xl">
                 {products[item.id].title}
               </h2>
+              <div>
+                <span
+                  className={`
+                      ${
+                        products[item.id].stockStatus === "in stock" && "text-green-400"
+                      }  
+                      ${
+                        products[item.id].stockStatus === "out of stock" && "text-red-400"
+                      }  
+                      ${
+                        products[item.id].stockStatus === "low stock" && "text-blue-400"
+                      }  
+                  `}
+                >
+                  {products[item.id].stockStatus}
+                </span>
+              </div>
               <div className="flex items-center gap-2 ">
                 <button
                   onClick={() => handleDecreaseQuantity(item.id)}
@@ -64,8 +84,9 @@ const CartPage = () => {
                 </button>
                 <span>{item.quantity}</span>
                 <button
-                    onClick={() => handleIncreaseQuantity(item.id)}
-                className="w-12 p-1 text-white bg-yellow-400  rounded-md">
+                  onClick={() => handleIncreaseQuantity(item.id)}
+                  className="w-12 p-1 text-white bg-yellow-400  rounded-md"
+                >
                   +
                 </button>
               </div>

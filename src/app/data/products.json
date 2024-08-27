@@ -10,6 +10,7 @@
         "rate": 3,
         "count": 120
       },
+      "stockStatus": "low stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -39,6 +40,7 @@
         "rate": 4,
         "count": 259
       },
+      "stockStatus": "in stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -58,6 +60,7 @@
         "rate": 3,
         "count": 500
       },
+      "stockStatus": "out of stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -77,6 +80,7 @@
         "rate": 5,
         "count": 430
       },
+      "stockStatus": "in stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -96,6 +100,7 @@
         "rate": 3,
         "count": 400
       },
+      "stockStatus": "in stock",
       "reviews": [
         {
         "user": "adesh2003",
@@ -115,6 +120,7 @@
         "rate": 3,
         "count": 70
       },
+      "stockStatus": "out of stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -134,6 +140,7 @@
         "rate": 2,
         "count": 400
       },
+      "stockStatus": "in stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -153,6 +160,7 @@
         "rate": 3,
         "count": 100
       },
+      "stockStatus": "low stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -172,6 +180,7 @@
         "rate": 3,
         "count": 203
       },
+      "stockStatus": "in stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -191,6 +200,7 @@
         "rate": 1,
         "count": 470
       },
+      "stockStatus": "out of stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -210,6 +220,7 @@
         "rate": 3,
         "count": 319
       },
+      "stockStatus": "in stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -229,6 +240,7 @@
         "rate": 3,
         "count": 400
       },
+      "stockStatus": "low stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -248,6 +260,7 @@
         "rate": 3,
         "count": 250
       },
+      "stockStatus": "in stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -267,6 +280,7 @@
         "rate": 3,
         "count": 140
       },
+      "stockStatus": "in stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -286,6 +300,7 @@
         "rate": 3,
         "count": 235
       },
+      "stockStatus": "low stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -305,6 +320,7 @@
         "rate": 3,
         "count": 340
       },
+      "stockStatus": "in stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -324,6 +340,7 @@
         "rate": 3,
         "count": 679
       },
+      "stockStatus": "in stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -343,6 +360,7 @@
         "rate": 3,
         "count": 130
       },
+      "stockStatus": "in stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -362,6 +380,7 @@
         "rate": 3,
         "count": 146
       },
+      "stockStatus": "in stock",
       "reviews": [
         {
           "user": "adesh2003",
@@ -381,6 +400,7 @@
         "rate": 3,
         "count": 145
       },
+      "stockStatus": "in stock",
       "reviews": [
         {
           "user": "adesh2003",

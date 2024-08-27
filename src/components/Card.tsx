@@ -2,34 +2,15 @@ import Link from "next/link";
 import Image from "next/image";
 import Stars from "./Star";
 import { addToCart } from "@/store/CartSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@/store/store";
-type ProductType = {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-  stock: number;
-  rating: {
-    rate: number;
-    count: number;
-  };
-  reviews: {
-    user: string;
-    comment: string;
-    rate: number;
-  }[];
-};
+import { useDispatch } from "react-redux";
 
-function formatString(input: string): string {
+const formatString = (input: string) => {
   return input
-      .trimEnd()
-      .replace(/[-,.\s]+/g, '-')  // Step 1: Replace one or more of the specified characters with '-'
-      .replace(/-+/g, '-')        // Step 2: Ensure no multiple hyphens exist
+      .trimEnd()                  // remove space from end
+      .replace(/[-,.\s]+/g, '-')  // replace + , -  with -
+      .replace(/-+/g, '-')        // Ensure no extra -
       .toLowerCase()
-  }
+}
 
 const Card = ({ product }: { product: ProductType }) => {
   const titleLink = formatString(product.title);
@@ -39,12 +20,8 @@ const Card = ({ product }: { product: ProductType }) => {
     dispatch(addToCart({id}));
   };
 
-  return (
-    
-
-    
+  return (  
     <div
-      key={product.id.toString()}
       className="w-full max-w-sm bg-gray-100 border border-gray-200 rounded-lg shadow"
     >
       <Image
@@ -69,10 +46,20 @@ const Card = ({ product }: { product: ProductType }) => {
             {product.rating.count}
           </span>
         </div>
+        <div>
+        <span className={`
+            ${product.stockStatus === "in stock" && "text-green-400"}  
+            ${product.stockStatus === "out of stock" && "text-red-400"}  
+            ${product.stockStatus === "low stock" && "text-blue-400"}  
+          `}>
+            {product.stockStatus}
+          </span>
+        </div>
         <div className="flex items-center justify-between">
           <span className="text-xl font-bold text-gray-900">
             Rs. {product.price.toString()}
           </span>
+          
           <button
             onClick={() => {handleAddToCart(product.id)}}
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "

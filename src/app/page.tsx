@@ -6,24 +6,7 @@ import Card from "@/components/Card"
 import { fetchData } from "@/store/dataSlice"
 import Loading from "@/components/Loading"
 
-type ProductsType = {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-  stock: number;
-  rating: {
-    rate: number;
-    count: number;
-  };
-  reviews: {
-    user: string;
-    comment: string;
-    rate: number;
-  }[];
-}[]
+
 
 const HomePage = () => {
   const dispatch: AppDispatch = useDispatch();
